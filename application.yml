@@ -1,6 +1,6 @@
 greeting:
-        name: CSI Config Service From GIT
-        id: csi-config-service-git
+        name: CSI Config Service From GITHUB
+        id: csi-config-service-github
         description: CSI Configurations Management Service maintain by GITHUB
         message: Hello There...!!! This is the Configurational Server Message From GITHUB
 
