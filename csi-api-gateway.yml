@@ -12,19 +12,6 @@ datasource:
 spring:
     cloud:
         gateway:
-            routes:
-            -   id: CSI-MOVIE-CATALOG
-                predicates:
-                - Path=/api/v1/**
-                uri: lb://CSI-MOVIE-CATALOG
-            -   id: CSI-MOVIE-INFO
-                predicates:
-                - Path=/api/v1/**
-                uri: lb://CSI-MOVIE-INFO
-            -   id: CSI-MOVIE-RATING
-                predicates:
-                - Path=/api/v1/**
-                uri: lb://CSI-MOVIE-RATING
             discovery:
                 locator:
                     enabled: true
