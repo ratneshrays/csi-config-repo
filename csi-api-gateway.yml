@@ -9,19 +9,19 @@ datasource:
         username: root-fromconfig
         password: root@12345-fromconfig
 
-spring: 
-	cloud: 
-		gateway: 
-			routes[0]: 
-				id: csi-movie-catalog
-				uri: lb://csi-movie-catalog
-				predicates[0]: Path=/csi-movie-catalog/api/v1/**
-			routes[1]: 
-				id: csi-movie-info
-				uri: lb://csi-movie-info
-				predicates[0]: Path=/csi-movie-info/api/v1/**
-
-			routes[2]: 
-				id: csi-movie-rating
-				uri: lb://csi-movie-rating
-				predicates[0]: Path=/csi-movie-rating/api/v1/**
+spring:
+    cloud:
+        gateway:
+            routes:
+            -   id: CSI-MOVIE-CATALOG
+                predicates:
+                - Path=/api/v1/**
+                uri: lb://CSI-MOVIE-CATALOG
+            -   id: CSI-MOVIE-INFO
+                predicates:
+                - Path=/api/v1/**
+                uri: lb://CSI-MOVIE-INFO
+            -   id: CSI-MOVIE-RATING
+                predicates:
+                - Path=/api/v1/**
+                uri: lb://CSI-MOVIE-RATING
