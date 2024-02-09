@@ -25,3 +25,7 @@ spring:
                 predicates:
                 - Path=/api/v1/**
                 uri: lb://CSI-MOVIE-RATING
+            discovery:
+                locator:
+                    enabled: true
+                    lower-case-service-id: true
