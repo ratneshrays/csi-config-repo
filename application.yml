@@ -10,3 +10,7 @@ datasource:
         password: root@12345-GITHUB
 
 
+okta:
+  oauth2:
+    issuer: 'https://dev-06807562.okta.com/oauth2/default'
+    audience: 'api://default'
