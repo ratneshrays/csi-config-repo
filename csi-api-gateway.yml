@@ -16,4 +16,10 @@ spring:
                 locator:
                     enabled: true
                     lower-case-service-id: true
-
+okta:
+  oauth2:
+    issuer: https://dev-06807562.okta.com/oauth2/default
+    audience: api://default
+    client-id: 0oaf2vz79gsNqZyd65d7
+    client-secret: iDa9TLH4YQFzwJ4EId6UJDGPI1_9gvX7IiClkVsfoqSRp3oOpXjxNr6kOqnu7zrQ
+    scopes: openid, profile, email, offline_access
