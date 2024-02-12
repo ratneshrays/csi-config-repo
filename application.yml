@@ -9,6 +9,23 @@ datasource:
         username: root-fromGITHUB
         password: root@12345-GITHUB
 
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: 'https://dev-06807562.okta.com/oauth2/default'
+      client:
+        registration:
+          csi-internal-client:
+            provider: okta
+            authorization-grant-type: client_credentials
+            scope: internal
+            client-id: 0oaf2vz79gsNqZyd65d7
+            client-secret: iDa9TLH4YQFzwJ4EId6UJDGPI1_9gvX7IiClkVsfoqSRp3oOpXjxNr6kOqnu7zrQ
+        provider:
+          okta:
+            issuer-uri: 'https://dev-06807562.okta.com/oauth2/default'
 
 okta:
   oauth2:
