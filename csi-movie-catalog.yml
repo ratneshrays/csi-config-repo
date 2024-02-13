@@ -1,0 +1,35 @@
+greeting:
+  name: CSI Config Service From Config Service
+  id: csi-config-service
+  description: CSI Configurations Management Service maintain by Config Service
+  message: >-
+    Hello There...!!! This is the Configurational Server Message From Config
+    Service
+datasource:
+  url: 'jdbc:mysql://localhost:3306/configurator-fromconfig'
+  username: root-fromconfig
+  password: root@12345-fromconfig
+
+  
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-06807562.okta.com/oauth2/default
+      client:
+        registration:
+          csi-internal-client:
+            provider: okta
+            authorization-grant-type: client_credentials
+            scope: internal
+            client-id: 0oaf2vz79gsNqZyd65d7
+            client-secret: iDa9TLH4YQFzwJ4EId6UJDGPI1_9gvX7IiClkVsfoqSRp3oOpXjxNr6kOqnu7zrQ
+        provider:
+          okta:
+            issuer-uri: https://dev-06807562.okta.com/oauth2/default
+  
+okta:
+  oauth2:
+    issuer: https://dev-06807562.okta.com/oauth2/default
+    audience: api://default
